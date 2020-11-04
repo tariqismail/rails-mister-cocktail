@@ -1,0 +1,15 @@
+<div class="container p-3">
+  <h1><%= @cocktail.name %></h1>
+  <div class="recipe mt-4">
+    <div class="recipe-title d-flex justify-content-between">
+      <h3>Recipe</h3>
+      <%= link_to "Add Dose", "#", class: 'btn btn-outline-success btn-xs' %>
+    </div>
+    <hr>
+    <ul>
+      <% @cocktail.doses.each do |dose| %>
+        <li><%= "#{dose.ingredient.name} - #{dose.description}" %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>

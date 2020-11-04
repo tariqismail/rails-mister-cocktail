@@ -1,0 +1,18 @@
+<!-- Banner -->
+<div class="banner">
+  <div class="container">
+    <h1>Let's make <strong>super tasty</strong> moktails with Monsieur Mocktail!</h1>
+    <a class="btn btn-flat" href="#">I'm feeling lucky!</a>
+  </div>
+</div>
+<!-- Mocktail Cards -->
+<div class="cards p-4">
+  <% @cocktails.each do |cocktail| %>
+    <%= link_to cocktail_path(cocktail) do %>
+      <div class="card-category"  style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))">
+        <%= cocktail.name %>
+      </div>
+    <% end %>
+  <% end %>
+
+</div>
