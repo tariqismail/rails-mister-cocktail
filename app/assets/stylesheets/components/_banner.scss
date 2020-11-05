@@ -1,16 +1,30 @@
 .banner {
-  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), asset-url('mocktail-banner-bg.jpg');
+  background-image: linear-gradient(rgba(255,255,255,0.2),rgba(255,255,255,0.2)), asset-url('mocktail-banner-bg.jpg');
   background-size: cover;
   background-position: center;
   padding: 150px 0;
+  text-align: center;
+}
+
+.banner .recipe-banner {
+  padding: 100px 0;
 }
 
 .banner h1 {
   margin: 0;
-  color: white;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 32px;
+  color: black;
+  text-shadow: 1px 1px 3px rgba(255,255,255,0.2);
+  font-size: 42px;
   font-weight: bold;
+  text-align: center;
+}
+
+.banner h2 {
+  margin-top: 16px;
+  color: black;
+  text-shadow: 1px 1px 3px rgba(255,255,255,0.2);
+  font-size: 32px;
+  text-align: center;
 }
 
 .banner p {

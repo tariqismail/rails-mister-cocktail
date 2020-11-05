@@ -1,7 +1,27 @@
 .delete-icon {
-  color: $gray;
+  color: $lime-light;
 }
 
 .delete-icon:hover {
-  color: $red;
+  color: $lime-dark;
+}
+
+.lime-light {
+  background-color: $lime-light;
+  color: $lime-dark;
+}
+
+.lime-light:hover {
+  background-color: $lime-dark;
+  color: $lime-light;
+}
+
+.lime-dark {
+  background-color: $lime-dark;
+  color: $lime-light;
+}
+
+.lime-dark:hover {
+  background-color: $lime-light;
+  color: $lime-dark;
 }

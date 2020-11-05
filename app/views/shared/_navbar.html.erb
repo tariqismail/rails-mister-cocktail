@@ -17,7 +17,9 @@
         <%= link_to "Home", cocktails_path, class: "nav-link" %>
       </li>
       <li class="nav-item">
-        <%= link_to "Add a Mocktail", new_cocktail_path, class: "btn btn-success" %>
+        <%= link_to new_cocktail_path, class: "btn btn-success lime-light" do %>
+          <i class="fas fa-cocktail"></i> Add New Mocktail
+        <% end %>
       </li>
       <!-- <li class="nav-item">
         <%= link_to "Messages", "#", class: "nav-link" %>
