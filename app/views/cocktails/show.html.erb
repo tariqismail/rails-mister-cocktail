@@ -1,9 +1,13 @@
+<% if @cocktail.photo.attached? %>
 <div class="banner recipe-banner" style="background-image: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)),
 url('<%= cl_image_path @cocktail.photo.key %>')">
-<div class="container">
-  <h1 class="logo-text"><%= @cocktail.name %></h1>
-  <!-- <a class="btn btn-flat" href="#">I'm feeling lucky!</a> -->
-</div>
+<% else %>
+<div class="banner recipe-banner" style="background-image: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1))">
+<% end %>
+  <div class="container">
+    <h1 class="logo-text"><%= @cocktail.name %></h1>
+    <!-- <a class="btn btn-flat" href="#">I'm feeling lucky!</a> -->
+  </div>
 </div>
 <div class="container p-3">
   <div class="recipe mt-4">
@@ -25,8 +29,8 @@ url('<%= cl_image_path @cocktail.photo.key %>')">
   </div>
   <div class="card p-4">
     <h5 class="card-title">Add an ingredient to <em><%= @cocktail.name %></em></h4>
-    <div class="card-body">
-      <%= render 'doses/form', cocktail: @cocktail, dose: @dose %>
+      <div class="card-body">
+        <%= render 'doses/form', cocktail: @cocktail, dose: @dose %>
+      </div>
     </div>
   </div>
-</div>
