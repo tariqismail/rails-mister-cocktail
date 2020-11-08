@@ -49,7 +49,7 @@ result = JSON.parse(open(url).read)
 
 result['drinks'].each do |drink|
   name = drink['strDrink']
-  cocktail = Cocktail.new(name: name)
+  cocktail = Cocktail.new(name: name, category: drink['strCategory'], glass: drink['strGlass'], instructions: drink['strInstructions'])
   # Get the cocktail image from the API
   file = URI.open(drink['strDrinkThumb'])
   cocktail.photo.attach(io: file, filename: "#{name}.png", content_type: 'image/png')
